@@ -1,0 +1,17 @@
+// $body-font-family: "FiraCode Nerd Font Mono", system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
+//   roboto, "Helvetica Neue", arial, sans-serif, "Segoe UI Emoji" !default;
+@mixin font($font-family, $font-file) {
+    @font-face {
+        font-family: $font-family;
+        src: url($font-file+'.woff') format('woff'),
+            url($font-file+'.ttf') format('ttf');
+        font-weight: normal;
+        font-style: monospace;
+    }
+}
+
+@include font("FiraMono", "/fonts/FiraCodeNerdFont-Regular");
+
+$body-font-family: "Montserrat", system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
+   roboto, "Helvetica Neue", arial, sans-serif, "Segoe UI Emoji" ;
+$mono-font-family: "FiraMono", menlo, consolas, monospace;
