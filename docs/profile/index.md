@@ -42,9 +42,9 @@ The following top-level keys are **required**: `name`, `implant_id_cookie`, `cli
 | `auto_self_destruct` | Whether or not to self destruct on failed checkins. If set to true, the implant will delete itself after `max_retries` failed checkins. | Yes | Boolean |
 | `retry_wait` | The number of seconds to wait before retrying a request. | Yes | Integer |
 | `retry_jitter` | % jitter. Between checkins, the implant will wait for a random amount of time between `retry_wait` and `retry_wait * (1 + retry_jitter)` | Yes | Float, `[0, 0.99]` |
-| `tailoring_hashes` | A list of hashes to use for payload tailoring. | Yes | List of strings |
-| `tailoring_hash_function` | The hash function to use for payload tailoring. | Yes | One of: `sha256`, `md5` |
-| `tailoring_hash_rounds` | The number of hash rounds to use for payload tailoring. | Yes | Integer |
+| `tailoring_hashes` | (Unused) A list of hashes to use for payload tailoring. | Yes | List of strings |
+| `tailoring_hash_function` | (Unused) The hash function to use for payload tailoring. | Yes | One of: `sha256`, `md5` |
+| `tailoring_hash_rounds` | (Unused) The number of hash rounds to use for payload tailoring. | Yes | Integer |
 
 #### Example JSON config
 

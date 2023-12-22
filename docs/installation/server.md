@@ -109,3 +109,32 @@ Replace `<operator name>` with the name of the operator you want to create.
 $ docker-compose --env-file .env run --rm operator python3 create_operator.py -n <operator name>
 ```
 {: .fs-5}
+
+### (Optional) Using Wireguard
+
+Wireguard is a VPN protocol that is used to securely connect implants to the C2 server. It is optional, but highly recommended.
+
+The nice thing about using wireguard is it locks down network connections to the server to only those that are connected to the VPN.
+
+I like to use [`wireguard-install`](https://github.com/hwdsl2/wireguard-install) for easy setup.
+To install it, run the following command:
+
+```bash
+$ wget -O wireguard.sh https://get.vpnsetup.net/wg
+$ sudo bash wireguard.sh --auto
+```
+{: .fs-5}
+
+Then follow the prompts to configure the server.
+
+To create a new operator config, run the following command:
+
+```bash
+$ ./wireguard.sh
+```
+{: .fs-5}
+
+Then follow the prompts to "Add a new client". This will generate a `.conf` file that you can send to the operator.
+
+{: .warning}
+It's best practice to have one Wireguard config per operator. This way, if an operator's config is compromised, you can easily revoke their access without affecting other operators.
