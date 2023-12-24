@@ -29,6 +29,7 @@ The primary C++ implant supports all of the following features.
 The Go implant is still in development and does not support all of the features listed below, but it has most of them.
 
 * File upload and download
+* End-to-end encrypted communication with perfect forward secrecy
 * Command execution
 * Shellcode injection
 * Live configuration updates
