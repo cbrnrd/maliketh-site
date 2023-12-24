@@ -2,6 +2,9 @@ title: Maliketh
 description: A flexible, easy to use C2 framework that can be customized to fit the needs of the operator
 theme: just-the-docs
 color_scheme: dark_custom
+logo: "/data/maliketh_logo.png"
+favicon_ico: "/data/favicon.ico"
+ga_tracking: G-FZN282X13R
 
 url: https://malikethframework.com
 
