@@ -1,30 +1,32 @@
 ---
-title: Home
-layout: home
-nav_order: 1
+title: index
+layout: minimal
+nav_exclude: true
 ---
 
-# Welcome
-{: .fw-700}
-![](data/maliketh_logo.png)
+<img src="/data/maliketh_logo.png" class="center"/>
 
-## What is Maliketh?
-Maliketh is a flexible, easy to use HTTPS C2 framework that can be customized to fit the needs of the operator. The main feature of the implant is its ability to change its behavior based on the configuration file it receives from the server. This allows the operator to customize the implant to fit their needs. Many configuration options can also be changed on the fly while the implant is running.
+<h1 class="center fw-500" >
+    <b>Welcome to Maliketh!</b>
+</h1>
 
-## Why Maliketh?
-This project started out as a project for a class in college, but I decided to continue working on it because I wanted to learn more about C2 frameworks and how they work. Also, I was bored.
+<p class="center fs-5">
+  A multi-user, customizable C2 framework.
+  <br>
+  I think it's pretty neat.
+  <br>
+</p>
 
-## How does it work?
-Maliketh has three primary components: the C2 server, the operator client, and the implant. 
+<p class="center" >
+ <img alt="GitHub License" src="https://img.shields.io/github/license/cbrnrd/maliketh?style=flat-square&color=ff5733">
+  <img alt="Latest Release" src="https://img.shields.io/github/v/release/cbrnrd/maliketh?logo=github&style=flat-square&color=ff5733&link=https%3A%2F%2Fgithub.com%2Fcbrnrd%2Fmaliketh%2Freleases">
+  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/cbrnrd/maliketh/docker-image.yml?style=flat-square">
+  <img alt="GitHub Release Date - Published_At" src="https://img.shields.io/github/release-date/cbrnrd/maliketh?style=flat-square&color=ff5733&link=https%3A%2F%2Fgithub.com%2Fcbrnrd%2Fmaliketh%2Freleases">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/cbrnrd/maliketh?style=flat-square&color=ff5733">
 
-The C2 server is responsible for handling communications between the operator and the implant. It also receives commands from the client and handles implant responses.
+</p>
 
-The operator client is responsible for interacting with the implant.
-
-The implant is the main binary to be executed on the target system. The implant is responsible for establishing a connection with the C2 server and executing commands from the operator.
-
-Here's a basic diagram of how the components interact with each other:
-![](data/maliketh_network_diagram.png)
-
-## How can I contribute?
-If you're interested in contributing to Maliketh, feel free to submit a pull request or open an issue. I'm always looking for ways to improve the framework.
+<span class="fs-8 center">
+[Source](https://github.com/cbrnrd/maliketh){: .btn .mr-2}
+[Documentation](/docs){: .btn .ml-2}
+</span>

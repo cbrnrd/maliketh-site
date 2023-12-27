@@ -20,6 +20,9 @@ gh_edit_link: true
 gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: "https://github.com/cbrnrd/maliketh-site"
 
+plugins:
+  - jekyll-seo-tag
+
 mermaid:
   # Version of mermaid library
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
@@ -41,3 +44,14 @@ callouts:
   important:
     title: Important
     color: blue
+
+collections:
+  home_index:
+    output: true
+    permalink: "/:collection/:path/"
+  
+just_the_docs:
+  collections:
+    home_index:
+      name: Home
+      nav_exclude: true

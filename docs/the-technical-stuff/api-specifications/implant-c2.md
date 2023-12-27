@@ -116,10 +116,10 @@ Example responses:
   }
   ```
 
-  See [job.md](../job.md) for more details on the job object.
+  See [Task](../task) for more details on the job object.
   Results of a job should be sent back to the appropriate endpoint to mark the task as completed.
 
-  For the meanining of `opcode`s, see [opcodes.md](../opcodes.md).
+  For the meanining of `opcode`s, see [opcodes](../opcodes).
 
 ## `/c2/task`
 
@@ -155,6 +155,6 @@ OK
 * 401:
 
 This can happen for a few reasons:
-    * Improperly formatted request body
-    * Missing implant identification cookie
-    * Implant with given ID doesn't exist
+* Improperly formatted request body
+* Missing implant identification cookie
+* Implant with given ID doesn't exist
