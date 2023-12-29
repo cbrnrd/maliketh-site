@@ -31,25 +31,56 @@ const C2_REGISTER_PASSWORD = "SWh5bHhGOENYQWF1TW9KR3VTb0YwVkVWbDRud1RFaHc="
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
 ```
 
-Then, build the debug implant using the following command:
+Then, go into the `go_implant` directory:
 
 ```bash
 $ cd go_implant
+```
+
+To build the development implant, simply run
+
+```bash
 $ make
 ```
 
-If you'd like to build an implant for all supported operating systems, run the following command:
+This builds the debug version of the implant for your native OS and architecture.
+
+{: .warning}
+Any other `make` command will respect the `DEBUG` environment variable when deciding to make a release or debug build.
+
+To build for Mac, Linux, and Windows, run:
 
 ```bash
-$ cd go_implant
+$ make most
+```
+
+This will cover most of the use cases.
+
+To build for *all* supported OSes and architectures, run
+
+```bash
 $ make all
 ```
 
-If you'd like to build a stripped version of the implant in release mode, run the following command:
+To build a stripped version of the implant, simply set `DEBUG=0` when running make:
 
 ```bash
-$ cd go_implant
-$ DEBUG=0 make [all]
+$ DEBUG=0 make most
+```
+
+To remove all print statements and debug strings, and strip the binary run:
+
+```bash
+$ DEBUG=0 make release
+
+# Compile all supported architectures
+$ DEBUG=0 make release-all
+```
+
+You can also set the usual `GOOS` and `GOARCH` environment variables to build for a specific OS and architecture using
+
+```bash
+$ GOOS=linux GOARCH=arm make build
 ```
 
 ## What's supported?
@@ -70,7 +101,6 @@ We've implemented all _basic_ functionality, but there are a few things that are
 * Sandbox detection behavior
 * (Mac) AV Kill
 * (Mac) Shellcode execution
-* 
 
 Also, since it's Golang, there are some downsides:
 * Memory footprint is larger
